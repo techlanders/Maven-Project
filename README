@@ -1,0 +1,28 @@
+Welcome to the DevOps test repository for Maven projects
+
+************************************************************
+
+To use this, your system (Centos 7) should have below tools installed:
+git  //you can use "yum install git -y" for this
+maven  //you can use "yum install maven -y" for this
+jenkins //follow the installation guideline at https://www.jenkins.io/doc/book/installing/#red-hat-centos
+docker // you can install docker with "yum install -y docker-ce docker-ce-cli containerd.io"
+
+
+post installing you can fecth the code from github account by clone the repo https://github.com/techlanders/Maven-Project.git
+git clone https://github.com/techlanders/Maven-Project.git
+
+use maven to clean the previous builds and  package the war file 
+mvn clean
+mvn package
+
+check the outputs in target directory structure and war file with name devops.war
+
+build the docker image with docker build command ( you can see dockerfile in present working directory)
+docker build -t image-name:version .
+
+Run a container from the image
+docker run -d -p 8080:8080 --name mycontainer image-name:version
+
+Check your system IP in browser :
+IP:8080/devops
