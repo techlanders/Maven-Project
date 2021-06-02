@@ -1,0 +1,7 @@
+---
+- hosts: prod
+  tasks:
+    - shell: "rm -rf /var/lib/jenkins/webapps/"
+    - copy:
+        src: /var/lib/jenkins/workspace/project1/target/devops.war
+        dest: /var/lib/tomcat/webapps/
