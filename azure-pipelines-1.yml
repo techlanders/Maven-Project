@@ -12,10 +12,7 @@ pool:
 variables:
 - group: demogroup
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
+stages:
 - stage: demostage
   jobs:
   - job: username
