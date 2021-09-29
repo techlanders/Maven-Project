@@ -47,3 +47,15 @@ stages:
         containerRegistry: $(dockerRegistryServiceConnection)
         tags: |
           $(tag)
+    - task: CopyFiles@2
+      inputs:
+        SourceFolder: 'dockerweb/manifests'
+        Contents: |
+          deployment.yml
+        TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+- task: CopyPublishBuildArtifacts@1
+  inputs:
+    Contents: 'deployment.yml'
+    ArtifactName: 'deployment.yml'
+    ArtifactType: 'FilePath'
