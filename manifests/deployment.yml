@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: techlandersmavenproject 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: techlandersmavenproject
+  template:
+    metadata:
+      labels:
+        app: techlandersmavenproject 
+    spec:
+      containers:
+        - name: techlandersmavenproject 
+          image: gaganapp.azurecr.io/techlandersmavenproject
+          ports:
+          - containerPort: 80
