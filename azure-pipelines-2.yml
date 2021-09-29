@@ -49,13 +49,8 @@ stages:
           $(tag)
     - task: CopyFiles@2
       inputs:
-        SourceFolder: 'dockerweb/manifests'
+        SourceFolder: '.'
         Contents: |
           deployment.yml
         TargetFolder: '$(Build.ArtifactStagingDirectory)'
 
-- task: CopyPublishBuildArtifacts@1
-  inputs:
-    Contents: 'deployment.yml'
-    ArtifactName: 'deployment.yml'
-    ArtifactType: 'FilePath'
