@@ -9,6 +9,8 @@ jenkins //follow the installation guideline at https://www.jenkins.io/doc/book/i
 docker // you can install docker with "yum install -y docker-ce docker-ce-cli containerd.io"
 
 
+
+
 post installing you can fecth the code from github account by clone the repo https://github.com/techlanders/Maven-Project.git
 git clone https://github.com/techlanders/Maven-Project.git
 
