@@ -2,7 +2,7 @@ Welcome to the DevOps test repository for Maven projects
 
 ************************************************************
 
-To use this, your system (Centos 7) should have below tools installed:
+the To use this, your system (Centos 7) should have below tools installed:
 git  //you can use "yum install git -y" for this
 maven  //you can use "yum install maven -y" for this
 jenkins //follow the installation guideline at https://www.jenkins.io/doc/book/installing/#red-hat-centos
