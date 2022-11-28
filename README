@@ -31,5 +31,5 @@ docker run -d -p 8080:8080 --name mycontainer image-name:version
 Check your system IP in browser :
 IP:8080/devops
 
-
+done
 Lab completed**
